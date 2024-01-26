@@ -1,6 +1,8 @@
 package com.example.onlineOrder.controller;
 
 import com.example.onlineOrder.entity.Customer;
+import com.example.onlineOrder.service.CustomerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -15,15 +17,23 @@ import org.springframework.web.bind.annotation.*;
  */
 @Controller
 public class SignUpController {
+
+    @Autowired
+    private CustomerService customerService;
+
     /**
      *  @RequestMapping annotation to define REST API,
      *      such as HTTP URL, method, etc
      */
     @RequestMapping(value="/signup", method= RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.CREATED)
+
     /**
-     * @RequestBody: convert the request body in the http request to a backend project
+     * @RequestBody: convert the request body in the http request to
+     * a backend project
      */
-    public void signUp(@RequestBody Customer customer) {}
+    public void signUp(@RequestBody Customer customer) {
+        customerService.signUp(customer);
+    }
 
 }

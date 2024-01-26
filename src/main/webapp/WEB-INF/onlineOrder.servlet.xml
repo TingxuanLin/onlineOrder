@@ -6,5 +6,8 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
                http://www.springframework.org/schema/context
                http://www.springframework.org/schema/context/spring-contex.xsd">
+    <!-- When the spring container initializes, it searches the root and sub folders
+     that are defined at base-package, instantiating the bean which has the
+     @Component annotation-->
     <context:component-scan base-package="com.example.onlineOrder" />
 </beans>

@@ -18,7 +18,7 @@
         <junit.version>5.9.2</junit.version>
     </properties>
 
-    <!-- what is dependency -->
+    <!-- what is dependency? The objects that the current class cooperates with -->
     <dependencies>
         <dependency>
             <groupId>jakarta.servlet</groupId>
