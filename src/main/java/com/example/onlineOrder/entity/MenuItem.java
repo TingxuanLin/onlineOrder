@@ -1,7 +1,9 @@
 package com.example.onlineOrder.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 import java.io.Serial;
@@ -27,6 +29,18 @@ public class MenuItem implements Serializable {
     private double price;
 
     private String imageUrl;
+
+    @ManyToOne
+    @JsonIgnore
+    private Restaurant restaurant;
+
+    public Restaurant getRestaurant() {
+        return restaurant;
+    }
+
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
+    }
 
     public int getId() {
         return id;

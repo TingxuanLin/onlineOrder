@@ -3,6 +3,7 @@ package com.example.onlineOrder.entity;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author lintingxuan
@@ -18,7 +19,18 @@ public class Cart implements Serializable {
     @GeneratedValue(strategy= GenerationType.AUTO) // generate id auto
     private int id;
 
+    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<OrderItem> orderItemList;
+
     private double totalPrice;
+
+    public List<OrderItem> getOrderItemList() {
+        return orderItemList;
+    }
+
+    public void setOrderItemList(List<OrderItem> orderItemList) {
+        this.orderItemList = orderItemList;
+    }
 
     public int getId() {
         return id;

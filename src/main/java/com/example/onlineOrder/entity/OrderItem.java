@@ -1,5 +1,6 @@
 package com.example.onlineOrder.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serial;
@@ -21,6 +22,29 @@ public class OrderItem implements Serializable {
     private int quantity;
 
     private double price;
+
+    @ManyToOne
+    private MenuItem menuItem;
+
+    @ManyToOne
+    @JsonIgnore
+    private Cart cart;
+
+    public MenuItem getMenuItem() {
+        return menuItem;
+    }
+
+    public void setMenuItem(MenuItem menuItem) {
+        this.menuItem = menuItem;
+    }
+
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
 
     public int getId() {
         return id;
