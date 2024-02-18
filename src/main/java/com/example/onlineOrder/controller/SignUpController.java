@@ -25,13 +25,14 @@ public class SignUpController {
      *  @RequestMapping annotation to define REST API,
      *      such as HTTP URL, method, etc
      */
-    @RequestMapping(value="/signup", method= RequestMethod.POST)
-    @ResponseStatus(value = HttpStatus.CREATED)
+
 
     /**
      * @RequestBody: convert the request body in the http request to
      * a backend project
      */
+    @RequestMapping(value="/signup", method= RequestMethod.POST)
+    @ResponseStatus(value = HttpStatus.CREATED)
     public void signUp(@RequestBody Customer customer) {
         customerService.signUp(customer);
     }
