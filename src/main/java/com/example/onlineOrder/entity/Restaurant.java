@@ -3,7 +3,6 @@ package com.example.onlineOrder.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
@@ -15,7 +14,7 @@ import java.util.List;
 @Table(name = "restaurants")
 public class Restaurant implements Serializable {
 
-    @Serial
+
     private static final long serialVersionUID = -5996516034257074587L;
     @Id
     private int id;

@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-import java.io.Serial;
+
 import java.io.Serializable;
 
 /**
@@ -17,7 +17,7 @@ import java.io.Serializable;
 @Table(name = "menuitem")
 public class MenuItem implements Serializable {
 
-    @Serial
+
     private static final long serialVersionUID = -7316749690369267468L;
     @Id
     private int id;

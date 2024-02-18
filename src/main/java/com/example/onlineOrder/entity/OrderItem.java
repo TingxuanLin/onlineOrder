@@ -3,7 +3,7 @@ package com.example.onlineOrder.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
-import java.io.Serial;
+
 import java.io.Serializable;
 
 /**
@@ -13,7 +13,6 @@ import java.io.Serializable;
 @Entity
 @Table(name = "orderitem")
 public class OrderItem implements Serializable {
-    @Serial
     private static final long serialVersionUID = 5425504123711332582L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
