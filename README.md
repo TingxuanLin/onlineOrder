@@ -11,3 +11,8 @@
 - Cart > OrderItem (1 : N)
 - OrderItem > MenuItem (N : 1)
 - MenuItem > Restaurant (N : 1)
+- INFO:
+  - END_POINT: onlineorder.cx6cm8wc27sw.us-east-2.rds.amazonaws.com
+  - username: TingxuanLin
+  - pw: Qwe123456!
+  - URL: jdbc:mysql://onlineorder.cx6cm8wc27sw.us-east-2.rds.amazonaws.com:3306/onlineOrder?createDatabaseIfNotExist=true&serverTimezone=UTC
